@@ -1,0 +1,26 @@
+env = Environment()   # Create an environmnet
+
+env.Append(LIBPATH = ['/opt/local/lib'])
+env.Append(CPPPATH = ['/opt/local/include']) 
+
+conf = Configure(env)
+if not conf.CheckLib('sndfile'):
+    print('libsndfile not installed')
+    Exit(1)
+if not conf.CheckLib('fftw3f'):
+    print('FFTW3 simple precision not installed')
+    Exit(1) 
+
+env = conf.Finish()
+env.ParseConfig('pkg-config --libs --cflags fftw3f sndfile') 
+
+env.AppendUnique(CPPDEFINES = ['VECLIB'])
+env.AppendUnique(LDFLAGS = ['-framework',  'vecLib'])
+# Use system default lapack library
+env.Append(LIBS = ['lapack', 'cblas']) 
+
+#Export('env')
+
+env.Program(target = 'segSCV', source = ["segSCV.c", "diverg.c", "detecter.c","cepst2.c", "cepstre2.c", "derivee.c",  "fft2.c", "outils.c", "silence.c", "travail.c", "analyse.c", "pitch_yin.c", "postProcessing.c", "extractPitch.c"] )
+
+

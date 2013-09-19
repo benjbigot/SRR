@@ -1,0 +1,39 @@
+file /home/bigot/Developpement/SystemeDeStructurationFondeeSurLeRole/StructurationFondeeSurRole/src/srcVOCALIS/SConstruct,line 8:
+	Configure(confdir = .sconf_temp)
+scons: Configure: Checking for C library sndfile... 
+scons: Configure: ".sconf_temp/conftest_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp/conftest_0.c <-
+  |  |
+  |  |
+  |  |
+  |  |int
+  |  |main() {
+  |  |  
+  |  |return 0;
+  |  |}
+  |  |
+  |
+gcc -o .sconf_temp/conftest_0.o -c -g -I/opt/local/include .sconf_temp/conftest_0.c
+gcc -o .sconf_temp/conftest_0 .sconf_temp/conftest_0.o -L/opt/local/lib -L/usr/include/atlas -L/usr/lib/lapack -lsndfile
+scons: Configure: yes
+
+scons: Configure: Checking for C library fftw3f... 
+scons: Configure: ".sconf_temp/conftest_1.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp/conftest_1.c <-
+  |  |
+  |  |
+  |  |
+  |  |int
+  |  |main() {
+  |  |  
+  |  |return 0;
+  |  |}
+  |  |
+  |
+gcc -o .sconf_temp/conftest_1.o -c -g -I/opt/local/include .sconf_temp/conftest_1.c
+gcc -o .sconf_temp/conftest_1 .sconf_temp/conftest_1.o -L/opt/local/lib -L/usr/include/atlas -L/usr/lib/lapack -lsndfile -lfftw3f
+scons: Configure: yes
+
+
