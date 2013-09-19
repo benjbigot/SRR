@@ -32,7 +32,7 @@ Speaker Role Recognition Toolkit
     ..................................................................
                               
     Contact :
-              Benjamin BIGOT SENAY - LIA - UNIVERSITE D'AVIGNON
+              Benjamin BIGOT - LIA - UNIVERSITE D'AVIGNON
               AGROPARC BP1228 84911  AVIGNON  CEDEX 09  FRANCE
               benjamin.bigot@univ-avignon.fr
     ..................................................................
